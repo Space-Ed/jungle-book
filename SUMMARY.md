@@ -2,6 +2,6 @@
 
 ## [Terminology](Concepts/terminology.md)
 
-## Implementation
+## [Implementation]
 
-## 
+## [Usage]
