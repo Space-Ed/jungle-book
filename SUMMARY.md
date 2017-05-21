@@ -1,9 +1,7 @@
 # Summary
 
-## Overview
+## [Terminology](Concepts/terminology.md)
 
-* [My Awesome API](README.md)
+## Implementation
 
-## Methods
-
-* [Defining Methods](methods.md)
+## 
