@@ -21,27 +21,31 @@ Membranes and the other Jungle IO constructs provide a way of creating dynamic i
 }
 ```
 
-## ownership
-
+## ownership & notification
 a membrane has a single owner called a membrane host, that is notified of changes upon the membrane and also defines the policy about what changes are possible. This is how a membrane is able to grow within a system because the host will be capable of reacting to the changes. For example the host could be a [Mesh](Mesh.md) that reacts to an addition by creating a link
 
 ## sub-membranes\(subranes\)
 
-A membrane can contain other membranes, this provides a natural way of grouping cruxes and moving them to new points of exposure in a wholesale way.
+A membrane can contain other membranes, this provides a natural way of grouping cruxes and moving them to new points of exposure in a wholesale way. Membranes always form a tree structure, so a membrane cannot be a subrane of many membranes, and they may not form feedback loops. A membrane containing others will be notified about changes occurring in any subrane including the addition and removal of subranes.
 
 ## designation
 
-primarily a membrane is a container for [Cruxes](Crux.md), once a crux has been added to a membrane it can be discovered and grouped using a special designation language.This looks something like
+primarily a membrane is a container for [Cruxes](Crux.md), once a crux has been added to a membrane it can be discovered and grouped using a special designation language.This looks something like:
 
 ```
-membrane.designate("a.b:c",'type')
-```
+    membrane.designate("a.b:c",'type')
+    //where a and b are subranes\(dot seperated\) and c is the crux \(after the colon\)
+ ```
 
-where a and b are subranes\(dot seperated\) and c is the crux \(after the colon\)
+furthermore it is possible to use wildcards similar to file globbing, to select multiple cruxes at once.
+
+```"*.b:*"``` means: from the submembrane called 'b' of all submembranes select 
+
+usually these designations are part of the link rules that dictate what get connected to what.
 
 ## inversion
 
-A membrane obviously can have two sides, which would depend on the perspective from which one is looking at it. We call the outer membrane the shell and the inner membrane the lining. Cruxes share this invertability, a crux with two contacts will expose one on the inner membrane and one on the out
+A membrane can have two sides, the inner face caled the shell and the outer face called the the lining. These are in fact two distinct membranes, each being the others in verse cruxes share this invertability, a crux with two contacts will expose one on the inner membrane and one on the outer. So you can think of the membrane being two circles where the cruxes are lines between them like the gills of a mushroom. 
 
 ## contact type separation
 
