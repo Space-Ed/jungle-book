@@ -1,7 +1,7 @@
 # Summary
 
-## [Terminology](Concepts/terminology.md)
+* [Terminology](Concepts/terminology.md)
 
-## [Implementation]
+* [Implementation](Implementation/README.md)
 
-## [Usage]
+* [Usage](Guide/README.md)
