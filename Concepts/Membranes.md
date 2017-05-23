@@ -45,7 +45,7 @@ usually these designations are part of the link rules that dictate what get conn
 
 ## inversion
 
-A membrane can have two sides, the inner face caled the shell and the outer face called the the lining. These are in fact two distinct membranes, each being the others in verse cruxes share this invertability, a crux with two contacts will expose one on the inner membrane and one on the outer. So you can think of the membrane being two circles where the cruxes are lines between them like the gills of a mushroom. 
+A membrane can have two sides, the inner face caled the shell and the outer face called the the lining. These are in fact two distinct membranes, each being the others inverse, they both have the same cruxes but as opposite contact-types. That means that cruxes must be invertable to appear on both sides. You can think of the membrane being two circles where the cruxes are lines between them like the gills of a mushroom, or spokes of a wheel.
 
 ## contact type separation
 
