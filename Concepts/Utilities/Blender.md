@@ -1,0 +1,1 @@
+The blender is a utility for map-reducing complex object structures. It is has a nested structure for the 

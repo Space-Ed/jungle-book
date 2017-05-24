@@ -4,9 +4,5 @@
 
 It is local to a particular pairing of contact types,
 
-it is interacted with through the interface 
-
-
-
 
 

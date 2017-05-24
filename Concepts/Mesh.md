@@ -1,0 +1,1 @@
+The mesh is the mechanism by which everything is connected to everything else. More specifically it is the component of Hexio that interprets a set of rules about what should be connected to what and manages the supposition of links between contacts within a medium that abide by these rules. A mesh is attached to cell for which it collects its inner membranes,  
