@@ -33,4 +33,19 @@ It is concievable that we would want to grant priority to claim the contact.
 	- being first in the rule list
 	- being asserted
 	
- 
+### Roles, contacts. push, pull
+
+It is unclear how cells should communicate the conditions of their usage through the contacts they expose. 
+
+a role is a nominal entity meaning the interface of a contact. 
+
+There is possibility of having a structural match of a contact? is that an abomination considering the structural interface is purely type information between implementation of crux and medium.  
+
+can I extend an interface so it can be used in more specific implementation scenarios? 
+
+Do we provide 
+
+# Terminology
+
+ Is Crux too esoteric and vaguely meaning what it is? what about "injector" or "port"  
+
