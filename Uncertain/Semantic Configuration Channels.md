@@ -37,11 +37,24 @@ Let us discuss the generic parameters that can create a full cycle
    - returning
    - synchronicity
    - fussiness
-####Medium:
+   
+#### Medium:
 - Foundation
    - Distributive
 - Supplement
    - allowed multiplicity.
    - selection of endpoints.
    - compatibility.
-   
+
+if all of these things belong to the same domain of functionality perhaps they need to be applicable at once. 
+
+What if you could give one name to the whole lateral system, and create all of these subconstructs within.
+
+Here 
+## A |-B-|d)~C~(e|-F-|G
+
+## A/G : Supporting Cell
+## B/F : Supporting Crux
+## d : supporting contact
+      
+it 
