@@ -14,3 +14,9 @@ Visors would be considered immutable and will not require referrability, they wo
 
 Creation of negative designators, so you get a visor of everything but some selection.
 
+Creation of grouped designators/partial wild. Such developments could be of use for capturing patterns of visoring.
+
+### Advanced
+it could be concieved that a rift is effectively a membrane in a crux, that would mean visoring by rules  from within a mesh could create powerful ability to channel whole interfaces.
+
+
