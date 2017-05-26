@@ -7,12 +7,12 @@ But there is more to the world of possible programs than what this architecture 
 The aim of Jungle is not to contrain to a particular architecture but rather to make the high level synchronisation connections between architectural components first class within the framework. This means they are on the same level as inter-module messaging and state sharing.
 
 These systems are:
-- Synchronised: What happens to one happens to the others.
-- Representation: How one looks is not how one is, representations are context sensitive expressions of form.
-- Cluster: a group of peers, each aware of the others, no hierarchy, free to come, free to go. 
+- **Synchronised**: What happens to one happens to the others.
+- **Representation**: How one looks is not how one is, representations are context sensitive expressions of form.
+- **Cluster**: a group of peers, each aware of the others, no hierarchy, free to come, free to go. 
 
-The advantage of this is that it becomes possible to create entire architectures as repositionalble components with plug in parts. 
+with this model it becomes possible to create entire architectures as repositionalble components with plug in parts, To add new representations of data without adding complexity to existing types, to synchronise and represent all or only part of a whole structure. 
 
-The true power of this technology is truly unlocked when it is spanned over networks and is able to manage the synchronization between several endpoints(probably using webrtc), thereby enabling distributed collaborative editing of arbitrary software systems. This technology will enable us to break free the shackles of the server-client web, and allow us to become connected to one another without the intemediaries watching over us.  
+The true power of this technology is truly unlocked when it is spanned over networks and is able to manage the synchronization between several endpoints on many hosts running various platform technology, thereby enabling distributed collaborative editing of arbitrary software systems. This technology will enable us to break free the shackles of the server-client web, and allow us to become connected to one another without the intemediaries watching over us.
 
-of course there are significant challenges for the imp
+of course there are significant challenges for the implementation of such a system.
