@@ -233,7 +233,7 @@ sandwich = Cell({
     
     form:{..}, //format the selection to a sandwich description
     
-    normal:["Bread", "Spread"], //implicit anon and patch and basis string values.  
+    normal:["Bread", "Spread"], //implicit anonymous and patch and basis string values.  
         
     classy:Cell({ //implicit basis "cell"
         locator:'fancy',
@@ -252,8 +252,8 @@ sandwich = Cell({
        }),        
         
         anon:[
-            {basis:"glutenFree:Bread", locator:""},
-            {basis:"Spread", locator:""}
+            {basis:"glutenFree:Bread", locator:"", patch:undefined},//explicit spec
+            {basis:"Spread", locator:"", patch:undefined}
         ]
        
     } 
