@@ -13,12 +13,11 @@ B says
 
 I would like to be constructed in my own domain.
 
-
-
 ### Example
 
 ```js
 import Cell, Domain from 'junglejs'
+
 
 Cell({
     domain:Domain({
@@ -35,6 +34,10 @@ Cell({
 ```
 
 The question is, how can we make a fancy sandwich?
+
+**Note: in this example the strings "Bread" and "Spread" are actually serial construct specifiers with bases of those names.**
+
+## Domain infliction
 
 ### Possibility 1 : alignment of domain with structure.
 
@@ -55,25 +58,25 @@ this model requires the parent to create a middle layer, to expicitly say the lo
 
 ```js
 sandwich:{
-    fancy:{locator:'fancy', patch:['Bread', 'Spread']}
+    fancy:{locator:'fancy', patch:['Bread', 'Spread']},
     normal:['Bread','Spread']
 }
 ```
 
 That will give the fancy array constructor the fancy domain of the parent.
 
-
-
 ### Possibility 3 : Locator key modifier
 
-This model requires extra parsing of the key to divulge the desired domain infliction. 
+This model requires extra parsing of the key to divulge the desired domain infliction.
 
 ```js
 sandwich:{
-    "myfancysandwich in domain fancy":["Bread", "Spread"]
+    "myfancysandwich of fancy":["Bread", "Spread"],
     normal:['Bread', 'Spread']
 }
 ```
+
+the syntax could be different than "&lt;key&gt; of &lt;domain&gt; "
 
 
 
