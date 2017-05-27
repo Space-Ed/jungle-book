@@ -39,7 +39,7 @@ The question is, how can we make a fancy sandwich?
 
 ## Domain infliction
 
-### Possibility 1 : alignment of domain with structure\(Implicit Domain use\).
+### Possibility A1 : alignment of domain with structure\(Implicit Domain use\).
 
 in this model the parent decides what it's children will have access to by defining an entry of it's own domain that is the domain to pass on, which could be overiding, inheriting or isolated.
 
@@ -63,7 +63,7 @@ domain:{
 ```
 Such double management would be quite unfavourable but this does perhaps show how domains may be based of an extention of a sibling domain
 
-### Possibility 2: Locator meta-construct property.
+### Possibility A2: Locator meta-construct property.
 
 this model requires the parent to create a middle layer, to expicitly say the location of the new cell
 
@@ -73,9 +73,9 @@ sandwich:{
 }
 ```
 
-That will give the fancy array constructor the fancy domain of the parent.
+That will give the fancy array constructor the fancy domain of the parent. This mode gives some flexibility to the child, who could be bringing their own locator.
 
-### Possibility 3 : Locator key modifier
+### Possibility A3 : Locator key modifier
 
 This model requires extra parsing of the key to divulge the desired domain infliction.
 
@@ -87,12 +87,12 @@ sandwich:{
 
 the syntax could be different than "&lt;key&gt; of &lt;domain&gt; "
 
-### Possibility 4: explicit Domain patch
+### Possibility A4: explicit Domain patch
 
 ```js
 sandwich:{
     fancy:Cell({
-        crown:["Bread", "Spread"]
+        anon:["Bread", "Spread"]
         domain:{
           Bread:"fancy:Bread",
           Spread:"fancy:Spread"  
@@ -104,21 +104,22 @@ or
 
 sandwich:{
     fancy:Cell({
-        crown:["Bread", "Spread"]
+        anon:["Bread", "Spread"] 
         domain:"fancy"
     })
 }
 ```
+see [Anonymous Values](The Treatment of Anonymous Values.md)
 
 ## Domain Selection
 
 In this section we make a fancy sandwich in the same domain but select the components we will use.
 
-### Possibility 1: not possible.
+### Possibility B1: not possible.
 
 The structural similarity of inflicting subdomains and specified selection is too similar to be harmonious and not confising. and selection does not allow for the kinds of encapsulation we are trying to implement.
 
-### Possibility 2:  Basis designation.
+### Possibility B2:  Basis designation.
 
 In this access methodology we are using a similar syntax to membranes in order to designate patterns in the structure
 
@@ -128,9 +129,9 @@ sandwich:{
     
 }
 ```
-### Possibility 3: name modifier.
+### Possibility B3: name modifier.
 
-Here we use some special expression as the key to 
+Here we use some special expression as the key to designate the domain.
 
 ```js
 sandwich:{
@@ -140,6 +141,154 @@ sandwich:{
     }
 }
 ```
+we lose arrays
 
-wait, isn't that actually infliction?
+### Possibility  B4: explicit basis designation:
+
+Actually this is the same as 2 but expanded so that it may include a locator 
+
+```js
+sandwich:{
+    fancy:[{basis:"fancy:Bread", locator:"fancy"},{basis:"fancy:Spread", locator:"fancy"}],   
+}
+```
+
+that's right 5 times we have written "fancy", first as the property name, then as selector, then as locator. This example highlights the confusion between the basis being based off the given location or of the parent. 
+
+both of these cases are ambiguous
+
+```js
+sandwich:{
+    fancy:[{basis:"Bread", locator:"fancy"},{basis:"Spread", locator:"fancy"}],   
+}
+```
+A)Bread is made in the fancy domain.
+B)Bread is made in the normal domain but from fancy ingredients.
+
+```js
+sandwich:{
+    fancy:[{basis:"fancy:Bread"},{basis:"fancy:Spread"}],   
+}
+```
+A)The Bread is given the parent domain.
+b)The Bread is given the same domain as the place it was designated.
+
+
+
+
+
+
+## Together
+
+It is this last possibility that really presents the only sensible option, because it is directly object representation, the others can be considered to be syntactic sugar which convert into this. Perhaps in the case of constructing a special domain to give to a child this can be achieved by extending an existing pattern and feeding back under a name. Alternatively we could have the locator property accept a domain, or we could as in A4 create a domain patch 
+
+### A2 & B4
+
+```js
+sandwich:{
+    gourmet:{
+        locator:"fancy",
+        patch:[
+            {basis:"Bread", locator:""},        
+            {basis:"Spread", locator:"fancy"}
+        ]
+    }  
+}
+
+```
+
+### Full Expression
+
+Creates a sandwich of normal classy or gourmet variety 
+
+```sh
+> sandwich.normal
+A tip-top white bread with Kraft peanut butter
+
+> sandwich.classy  
+A Wholewheat & Linseed Sourdough with Hummus and Sundried Tomatoes
+
+> sandwich.gourmet
+A Crusty Semolina with mushrooms fried in butter
+```
+
+
+```js
+
+import Cell, Domain from 'junglejs'
+
+
+sandwich = Cell({
+    domain:Domain({
+        Bread:"Tip-top white bread"
+        Spread:"Kraft peanut butter"
+        fancy:Domain({ //implicitly patch
+            Bread:"Wholewheat & Linseed sourdough"
+            Spread:"Pic's Peanut Butter"
+            classy:Domain({
+                Spread:"Hummus and Sundried Tomatoes"
+            })
+        })
+    }),
+    
+    form:{..}, //format the selection to a sandwich description
+    
+    normal:["Bread", "Spread"], //implicit anon and patch and basis string values.  
+        
+    classy:Cell({ //implicit basis "cell"
+        locator:'fancy',
+        patch:["Bread", "classy:Spread"]              
+     }), 
+        
+    gourmet:{ //implicit cell patch
+        domain:Domain({ //explicit domain extention
+          basis:"fancy", //domain basis
+          patch:{
+              Spread:"mushrooms fried in butter", //domain specific override
+              glutenFree:Domain({
+                  Bread:"Crusty semolina"
+              })
+          }
+       }),        
+        
+        anon:[
+            {basis:"glutenFree:Bread", locator:""},
+            {basis:"Spread", locator:""}
+        ]
+       
+    } 
+})
+
+
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
