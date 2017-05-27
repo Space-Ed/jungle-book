@@ -11,6 +11,10 @@ B says
   I am being constructed in a domain  
   I would like to choose which subdomain I am constructed with
 
+I would like to be constructed in my own domain.
+
+
+
 ### Example
 
 ```js
@@ -25,12 +29,12 @@ Cell({
             Spread:"Pic's Peanut Butter"
         })
     }),
-    
+
     sandwich:['Bread', 'Spread']  
 })
 ```
 
-The question is, how can we make a fancy sandwich? 
+The question is, how can we make a fancy sandwich?
 
 ### Possibility 1 : alignment of domain with structure.
 
@@ -43,7 +47,7 @@ sandwich:{
 }
 ```
 
-In this example our scanning of the sandwich property finds two children, one has a key that is within the domain, that is 'fancy' so when the fancy array is scanned, it will be given that subdomain 
+In this example our scanning of the sandwich property finds two children, one has a key that is within the domain, that is 'fancy' so when the fancy array is scanned, it will be given that subdomain
 
 ### Possibility 2: Locator meta-construct property.
 
@@ -51,8 +55,23 @@ this model requires the parent to create a middle layer, to expicitly say the lo
 
 ```js
 sandwich:{
-    fancy:[{locator:'fancy',basis:'Bread'},{locator:'fancy', basis:'Bread'}]
-    fancy:[{locator:'fancy',basis:'Bread'},{locator:'fancy', basis:'Bread'}]
+    fancy:{locator:'fancy', patch:['Bread', 'Spread']}
+    normal:['Bread','Spread']
+}
+```
+
+That will give the fancy array constructor the fancy domain of the parent.
+
+
+
+### Possibility 3 : Locator key modifier
+
+This model requires extra parsing of the key to divulge the desired domain infliction. 
+
+```js
+sandwich:{
+    "myfancysandwich in domain fancy":["Bread", "Spread"]
+    normal:['Bread', 'Spread']
 }
 ```
 
