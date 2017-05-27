@@ -39,7 +39,7 @@ The question is, how can we make a fancy sandwich?
 
 ## Domain infliction
 
-### Possibility 1 : alignment of domain with structure.
+### Possibility 1 : alignment of domain with structure\(Implicit Domain use\).
 
 in this model the parent decides what it's children will have access to by defining an entry of it's own domain that is the domain to pass on, which could be overiding, inheriting or isolated.
 
@@ -50,7 +50,18 @@ sandwich:{
 }
 ```
 
-In this example our scanning of the sandwich property finds two children, one has a key that is within the domain, that is 'fancy' so when the fancy array is scanned, it will be given that subdomain
+In this example our scanning of the sandwich property finds two children, one has a key that is within the domain, that is 'fancy' so when the fancy array is scanned, it will be given that subdomain. While elegant in expression The obvious problem is that you can have a 'gourmet' and 'classy' names both using the fancy domain. without also expressing these in the domain description.
+
+```js
+domain:{
+    ..
+    fancy:{..}
+    gourmet:Domain('fancy'),
+    classy:Domain('fancy')
+}
+    
+```
+Such double management would be quite unfavourable
 
 ### Possibility 2: Locator meta-construct property.
 
@@ -58,8 +69,7 @@ this model requires the parent to create a middle layer, to expicitly say the lo
 
 ```js
 sandwich:{
-    fancy:{locator:'fancy', patch:['Bread', 'Spread']},
-    normal:['Bread','Spread']
+    fancy:{locator:'fancy', patch:['Bread', 'Spread']}
 }
 ```
 
@@ -71,12 +81,55 @@ This model requires extra parsing of the key to divulge the desired domain infli
 
 ```js
 sandwich:{
-    "myfancysandwich of fancy":["Bread", "Spread"],
-    normal:['Bread', 'Spread']
+    "myfancysandwich of fancy":["Bread", "Spread"]
 }
 ```
 
 the syntax could be different than "&lt;key&gt; of &lt;domain&gt; "
+
+### Possibility 4: explicit Domain patch
+
+```js
+sandwich:{
+    fancy:Cell({
+        crown:["Bread", "Spread"]
+        domain:{
+          Bread:"fancy:Bread",
+          Spread:"fancy:Spread"  
+        }
+    })
+}
+
+or
+
+sandwich:{
+    fancy:Cell({
+        crown:["Bread", "Spread"]
+        domain:"fancy"
+    })
+}
+```
+
+## Domain Selection
+
+In this section we make a fancy sandwich in the same domain but select the components we will use.
+
+### Possibility 1: not possible.
+
+The structural similarity of inflicting subdomains and specified selection is too similar to be harmonious and not confising. and selection does not allow for the kinds of encapsulation we are trying to implement.
+
+### Possibility 2:  Basis designation.
+
+In this access methodology we are using a similar syntax to membranes in order to designate patterns in the structure
+
+```js
+sandwich:{
+    fancy:["fancy:Bread", "fancy:Spread"],
+    
+}
+
+
+```
 
 
 
