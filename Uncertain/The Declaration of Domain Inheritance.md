@@ -61,7 +61,7 @@ domain:{
 }
     
 ```
-Such double management would be quite unfavourable
+Such double management would be quite unfavourable but this does perhaps show how domains may be based of an extention of a sibling domain
 
 ### Possibility 2: Locator meta-construct property.
 
@@ -127,9 +127,19 @@ sandwich:{
     fancy:["fancy:Bread", "fancy:Spread"],
     
 }
+```
+### Possibility 3: name modifier.
 
+Here we use some special expression as the key to 
 
+```js
+sandwich:{
+    gourmet:{
+        fancy_0:"Bread",
+        fancy_1:"Spread"
+    }
+}
 ```
 
-
+wait, isn't that actually infliction?
 
