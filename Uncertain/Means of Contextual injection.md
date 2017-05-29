@@ -18,9 +18,25 @@ Such a move calls into question exactly where those kinds of declaration's effec
 
 Contact inheritance seems to be inevitable, because we want to extract this notion of hookability. That is inescapable in a sense. But lets not throw the baby out with the bathwater and say that the whole mesh must be recreated. By default, media have 1 or 2 roles, now they should be more abstract contact types. But really this is only to achieve a single feature, instead of throwing away everything. lets just force hookability onto the contact interface. That means a crux declares it's hookability, and if so must also provide the implementation of hook method against a given (contact, exposure). Now we will skirt around the mesh and have a seperate, declaration space that is hooks. From a configuration perspective it will look quite similar to declaring rules in a medium.
 
+```js
+
 hooks:[
-	"<designator> "
+    "mebrane:crux >> path.to.alias"
 ]
+
+```
+
+the issue with this hooks object is that it is so similar to the mesh rules that it could be confused, having a distinctly aggressive state changing effect at any time in the cells life.
+
+Also we want all kinds of contacts that are 'hookable' to be affected by this segment, but that means there is not the same assurance that a medium has to be dealing with one type on each side of the arrow. 
+
+that is then going to require us to specify the contact-type that should be hooked(arduous) or reintroduce those hooks to the media where the types are implicit (colluded). The third option is to make hooks a medium that deals with the abstract type of contact 'hookable', and then you would have conflicts when the types are not compatible. 
+
+Actually option zero is to expose the mesh to the state. thereby allowing designation of contacts
+
+or exposing every crux that is not linked to anything(that's actually totally crazy)
+
+another novel approach is to declare a visor which is exposed for the mesh, that would prevent designation through the normal channel. it would be declarative, but there is still the step where we choose which contact types, so it becomes arduous. in fact all designations require the type to be specifi
 
 
 
