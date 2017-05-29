@@ -1,7 +1,9 @@
 # Summary
+* Philosophy
 
-* [Terminology](Concepts/terminology.md)
-
+* [Concepts](Concepts/README.md)
+    
+    
 * [Implementation](Implementation/README.md)
 
 * [Usage](Guide/README.md)

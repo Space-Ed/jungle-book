@@ -237,23 +237,21 @@ sandwich = Cell({
         
     classy:Cell({ //implicit basis "cell"
         locator:'fancy',
-        patch:["Bread", "classy:Spread"]              
+        anon:["Bread", "classy:Spread"]              
      }), 
         
     gourmet:{ //implicit cell patch
-        domain:Domain({ //explicit domain extention
+        domain:{ //explicit domain extention
           basis:"fancy", //domain basis
-          patch:{
-              Spread:"mushrooms fried in butter", //domain specific override
-              glutenFree:Domain({
-                  Bread:"Crusty semolina"
-              })
-          }
-       }),        
+          Spread:"mushrooms fried in butter", //domain specific override
+          glutenFree:Domain({
+              Bread:"Crusty semolina"
+          })
+        },        
         
         anon:[
-            {basis:"glutenFree:Bread", locator:"", patch:undefined},//explicit spec
-            {basis:"Spread", locator:"", patch:undefined}
+            {basis:"glutenFree:Bread", locator:""},//explicit spec
+            {basis:"Spread", locator:""}
         ]
        
     } 

@@ -50,11 +50,11 @@ if all of these things belong to the same domain of functionality perhaps they n
 
 What if you could give one name to the whole lateral system, and create all of these subconstructs within.
 
-Here 
-## A |-B-|d)~C~(e|-F-|G
+Here is a depiction of the full lateral
+#### A |-B-|d)~C~(e|-F-|G
 
-## A/G : Supporting Cell
-## B/F : Supporting Crux
-## d : supporting contact
-      
-it 
+ A/G : Supporting Cell
+ B/F : Supporting Crux
+ d/e : supporting contact
+ C : Medium
+        
