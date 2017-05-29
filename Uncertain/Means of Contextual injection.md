@@ -53,7 +53,8 @@ In a way we have gone full circle to having a hooks configuration, except now it
 {
     tostomach:{
         basis:'hook',
-        visor:'stomach:oesophagus/called'
+        visor:'stomach:oesophagus/called',
+        exclusive:true
     }
 }
 
@@ -101,13 +102,16 @@ you can take this one step further considering that a cell's configuration can d
     outmouth:{
        basis:'hook',
        visor:'*:{oesophagus, windpipe}/called',
-       collapse:true
+       infect:true
     }
 }
 
-this.outmouth.windpipe('air');
-this.outmouth.oesophagus('food');
+this.windpipe('air');
+this.oesophagus('food');
 
 ```
+this infection is a quip about global namespace infection or pollution, perhapse a word of warning that you will spill an undetermined number of names into the space.
 
+## Implementation As discussed 
+- 
 
