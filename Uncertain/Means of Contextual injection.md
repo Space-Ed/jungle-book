@@ -113,5 +113,18 @@ this.oesophagus('food');
 this infection is a quip about global namespace infection or pollution, perhapse a word of warning that you will spill an undetermined number of names into the space.
 
 ## Implementation As discussed 
-- 
-
+- Base Class for hookConstructs
+- injection implementation is of the crux,  args:(object, key, contact).
+- visors are required and take sub.chain:crux/contact strings.
+- VisorHook implemented 
+    -exclusive
+    -collapse
+    -infect
+- attains a visor and applies a full designation optionally flattening.
+- responds to the listener methods of the visor by applying injective operation.
+- Crux must provide a mod that is reversible as its inject return value.
+- formatting functions for shortcuts.
+- Mesh is unaffected(phew).
+- base classes in jungle domain.
+- visor handles preemption of crux appearance.
+- bypasses preempt the visors of injectors
