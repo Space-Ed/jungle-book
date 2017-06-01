@@ -12,7 +12,8 @@ Influence
 with the above culminating in a way to expreses intent, but how could this intent be active upon the very space that permitted them? the meta membrane can allow action upon the space of creation and at the same time a synchronization contact can allow the structure to be externally reflected. This means actions one way on the synclink are validated and sync the otherway is absolute. The validation taking place is the democratic descision process. By being present in the space we are exposed to a view of the structure and a way to express our vision of the structure.
 
 The weave
-_:sync->agents.*:sync
-agents:suggest+->suggestions
-agents:influence->suggestions
-suggestions:desisions-> 
+_:sync->agents.*:sync 						   agents accept changes from the root  
+agents.*:suggest->suggestions:suggest			agents make suggestions by plugging into this fixed cell 
+agents.*:influence->suggestions:influence		  agents influence the suggestion by vote or interpolation
+suggestions:desisions-> _.sync 				  descisions that have passed resolution are implemented
+
