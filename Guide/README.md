@@ -2,17 +2,9 @@
 
 ## Basic Usage
 
-```js
-import Jungle from 'junglejs'
 
+ˋˋˋbash
+npm i -g jungle-core
+jungle help
 
-Jungle.App({
-    include:[BodyParts],
-    
-    head:    
-    
-})
-```
-
-
-
+ˋˋˋ
