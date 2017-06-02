@@ -1,10 +1,10 @@
 # Summary
 
-* [Introduction](Introduction.md)
 
-* [Philosophy](Philosophy/README.md
+* [Philosophy](Philosophy/README.md)
 
 * [Concepts](Concepts/README.md)
+
 * [Analogues](Analogues/README.md)   
    
 * [Implementation](Implementation/README.md)
