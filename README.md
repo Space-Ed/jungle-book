@@ -47,12 +47,16 @@ The Jungle Framework is, from the outset, in it's own category with regards to e
 
 This Book serves as a full course in the Jungle Framework, This is no small ordeal so it is broken into several sections according to what angle of understanding one may wish to approach.
 
-Philosphy - is a collection of writings about the fundamental underpinnings of Jungle, ranging from practical software design philosophy to a metaphysics of Jungle.
+[Philosphy](./Philosophy/README.md) - is a collection of writings about the fundamental underpinnings of Jungle, ranging from practical software design philosophy to a metaphysics of Jungle.
 
-Analogues - a collection of examples from real life, reconsidered as jungle systems to gain an intuitive grasp of the ideas, great for learning from narrative style and diverse perspectives
+[Analogues](./Analogues/README.md) - a collection of examples from real life, reconsidered as jungle systems to gain an intuitive grasp of the ideas, great for learning from narrative style and diverse perspectives
 
-User Guide - Yes It is empty, that's because you cant use it yet
+[User Guide](./Guide/README.md) - Yes It is empty, that's because you cant use it yet
 
-Concepts - pure explainations of the foundational entities in the machinery of Jungle.
+[Concepts](./Conceps/README.md) - pure explainations of the foundational entities in the machinery of Jungle.
 
-Speculation - Fanciful discussions of what could be achieved using the framework
+[Speculation](./Speculation/README.md) - Fanciful discussions of what could be achieved using the framework
+
+
+
+Copyright Edward Dalley 2017
