@@ -9,6 +9,7 @@ a construct implements a certain interface and meets some operational requiremen
 
 ## Spec
 A construct is always instantiated with a single object, that will contain all configuration and information required for construction. This object should be considered to be immutable. It contains some properties that have special keyword meaning.
+
 ###basis
 The identifier with which to designate the base implementation of the construct from the domain of the parent.
 
@@ -17,3 +18,6 @@ The identifier with which to designate the base implementation of the construct 
 2. (Domain) the actual domain to use
 3. (undefined) the default is to inherit the parent domain.
 
+
+###Everything else
+Everything else is the information required to create the particular kind of construct in question

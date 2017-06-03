@@ -45,14 +45,17 @@ usually these designations are part of the link rules that dictate what get conn
 
 ## inversion
 
-A membrane can have two sides, the inner face caled the shell and the outer face called the the lining. These are in fact two distinct membranes, each being the others inverse, they both have the same cruxes but as opposite contact-types. That means that cruxes must be invertable to appear on both sides. You can think of the membrane being two circles where the cruxes are lines between them like the gills of a mushroom, or spokes of a wheel.
+A membrane can have two sides, the inner face caled the shell and the outer face called the the lining. These are in fact two distinct membranes, each being the others inverse, they both posess a contact which is the inverse and partner of the other. That means that cruxes must be invertable to appear on both sides. You can think of the membrane being two circles where the cruxes are lines between them like the gills of a mushroom, or spokes of a wheel.
 
 ## contact type separation
 
 ```
 see [Contact] (contact.md)
-contacts are organised by type, therefore contacts of distinct type but similar name may coexist, this means that patterns of interconnectedness can be repeated accross different contact types.
-```
 
+
+## Soft Reformation and Hard Reformation.
+
+A cell can at any point as dictated by it's context be disposed of and rebuilt in place. This will at the medium level mean a removal of the membrane and all it's contacts that will break all links. This comes at substantial cost because the links are many. Instead of retracting all contacts when a cell undergoes reformation we can leave the contacts on the shell side of the membrane in place. Then when our constructs  come around the next time to generate those contacts, only the inner surface must be repopulated and creates partnerships with those matching on the outer surface instead of performing a generative invesion. There are tractible technical problems with doing this, what if the outer is not replaced? what if the construct targets the shell, what if it is replaced with an incompatible type(and how would we know it is compatible or not?) What if the inversion requires information particular to this context(That would require the grafting of a new specification. Essentially it comes down to the certain kind of contact, adding another contact property of reconnectable.
+ 
 
 
