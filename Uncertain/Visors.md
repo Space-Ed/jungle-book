@@ -1,6 +1,12 @@
 # Visors
 
-Visors are the means by which a section of a membrane is virtualised as a seperate entity while retaining the actual containment of cruxes to a single membrane. Allowing for membranes to be virtually forwarded to different membranes. Primarily so that exposure can be managed at 
+Visors are the means by which a section of a membrane is virtualised as a seperate entity while retaining the actual containment of cruxes to a single membrane. Allowing for membranes to be virtually forwarded to different membranes. 
+
+Primarily so that exposure can be managed.
+    - Bypassing child shells to parent of a certain set of cruxes.
+    - exposing to synchronous operation contexts by injection of a subdesignation.
+    - Manual forwarding rules.
+    - Domain slicing. 
 
 it relates to the system for adding a subrane to another membrane, now also you can add a visor.
 
@@ -15,6 +21,8 @@ Visors would be considered immutable and will not require referrability, they wo
 Creation of negative designators, so you get a visor of everything but some selection.
 
 Creation of grouped designators/partial wild. Such developments could be of use for capturing patterns of visoring.
+
+
 
 ### Advanced
 it could be concieved that a rift is effectively a membrane in a crux, that would mean visoring by rules  from within a mesh could create powerful ability to channel whole interfaces.
