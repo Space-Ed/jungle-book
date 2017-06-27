@@ -1,2 +1,0 @@
-#The Hexamatic Interoperability Ring
-
